@@ -70,7 +70,7 @@ from simple_security.middleware import WAFMiddleware
 
 app = FastAPI()
 
-waf_middleware = WAFMiddleware(app, config_file_path="app/config/config.yaml")
+waf_middleware = WAFMiddleware(app, config_file_path="app/config/settings.yaml")
 
 @app.get("/")
 async def root():
