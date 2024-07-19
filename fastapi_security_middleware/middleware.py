@@ -9,14 +9,15 @@ class WAFMiddleware:
         Option={},
         script_nonce=False,
         style_nonce=False,
-        report_only=False
+        report_only=False,
+        config_file_path="fastapi_security_middleware/config/settings.yml"
     ):
         self.app = app
         self.Option = Option
         self.script_nonce = script_nonce
         self.style_nonce = style_nonce
         self.report_only = report_only
-        self.core_waf = CoreWAF(config_file_path="fastapi_waf/settings.yml")
+        self.core_waf = CoreWAF(config_file_path)
 
         default_config = {
             'xframe': True,
