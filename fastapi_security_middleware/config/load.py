@@ -55,10 +55,3 @@ class LoadConfig:
                 await self.fetch_from_endpoint()
                 self.update_waf_config()
             await asyncio.sleep(interval)
-
-# Usage example:
-# load_conf = LoadConf(file_path="config/settings.yaml")
-# config = load_conf.load_config()
-# Or for async endpoint fetching:
-# load_conf = LoadConf(endpoint="http://endereco-do-servico-externo/config")
-# asyncio.run(load_conf.schedule_config_updates())
